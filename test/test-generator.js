@@ -1,7 +1,7 @@
 /*jslint node: true */
 /*global describe, it, before, beforeEach, after, afterEach */
 var mocha = require('mocha');
-var MDA = require('../TwoDimensionalArrays');
+var TDA = require('../TwoDimensionalArrays');
 
 var chai = require('chai');
 var expect = chai.expect;
@@ -12,7 +12,7 @@ describe('TwoDimensionalArray.generate', function() {
 
   it('should return a 5x4 multi-dimensional array, containing random boolean values', function() {
     //var result = [ [1,0,1,1], [0,1,0,0], [1,1,0,1], [0,0,0,1], [0,1,1,1] ] ;
-    var result = MDA.generate(5,4);
+    var result = TDA.generate(5,4);
     expect(result).to.be.instanceof(Array);
     expect(result).to.have.length(5);
     for(var i=0; i<result.length; i++) {
